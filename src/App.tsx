@@ -280,16 +280,16 @@ const timeline = [
     description: "Started Master's degree with AI specialization at Politechnika Łódzka",
   },
   {
-    date: "August 2022",
-    type: "professional",
-    title: "Frontend Developer",
-    description: "Transitioned to Frontend Developer role at Comarch",
-  },
-  {
     date: "March 2023",
     type: "education",
     title: "Bachelor's in Computer Science",
     description: "Graduated with Bachelor's degree from Politechnika Łódzka",
+  },
+  {
+    date: "August 2022",
+    type: "professional",
+    title: "Frontend Developer",
+    description: "Transitioned to Frontend Developer role at Comarch",
   },
   {
     date: "October 2021",
