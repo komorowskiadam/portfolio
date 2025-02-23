@@ -1,10 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Github, Linkedin, Mail, Download, GraduationCap, Briefcase } from "lucide-react";
-import portrait from "./assets/img1.jpg";
-import koncert from "./assets/koncert-min.png";
-import security from "./assets/security-min.jpg";
-import questions from "./assets/question-marks.avif";
-import edytor from "./assets/edytor.png";
+import portrait from "./assets/img1.webp";
+import koncert from "./assets/koncert-min.webp";
+import security from "./assets/security-min.webp";
+import questions from "./assets/question-marks.webp";
+import edytor from "./assets/edytor.webp";
+import { Helmet } from "react-helmet-async";
+import bg from "./assets/bg1.webp";
+import bg2 from "./assets/bg2.webp";
 
 function useIntersectionObserver(options = {}) {
   const elementRef = useRef(null);
@@ -53,9 +56,30 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <Helmet>
+        <title>Adam Komorowski - Frontend Developer & AI Enthusiast</title>
+        <meta
+          name="description"
+          content="Portfolio of Adam Komorowski, a Computer Science student and Frontend Developer specializing in AI and modern web technologies."
+        />
+        <meta
+          name="keywords"
+          content="Adam Komorowski, Frontend Developer, Strony internetowe, Strony www, Strony Łódź, Adam Łódź, Komorowski Łódź"
+        />
+        <meta name="author" content="Adam Komorowski" />
+        <meta property="og:title" content="Adam Komorowski - Frontend Developer" />
+        <meta
+          property="og:description"
+          content="Explore my projects and skills in frontend development and artificial intelligence."
+        />
+        <meta property="og:image" content={portrait} />
+        <meta property="og:url" content="https://komorowskiadam.pl" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-teal-700 text-white flex items-center animate-[fadeIn_1s_ease-out]">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop')] opacity-10 bg-cover bg-center" />
+        <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }} />
         <div className="container mx-auto px-6 max-w-5xl relative">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 md:py-20">
@@ -65,8 +89,8 @@ function App() {
                 <h2 className="text-2xl md:text-3xl text-purple-200 font-medium">Frontend Developer</h2>
               </div>
               <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl leading-relaxed animate-[fadeIn_1s_ease-out_0.3s] opacity-0 [animation-fill-mode:forwards]">
-                Passionate about leveraging artificial intelligence to solve real-world problems. Currently pursuing my
-                CS degree with a focus on artificial intelligence.
+                Passionate Frontend Developer from Poland leveraging artificial intelligence to build innovative web
+                solutions. Currently pursuing my CS degree with a focus on AI at Politechnika Łódzka.
               </p>
               <div className="flex gap-4 animate-[fadeIn_1s_ease-out_0.6s] opacity-0 [animation-fill-mode:forwards]">
                 <button className="btn-hover bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-purple-50 transition-colors shadow-lg hover:shadow-xl">
@@ -92,7 +116,10 @@ function App() {
 
       {/* Timeline Section */}
       <section className="relative py-24 bg-gradient-to-b from-purple-50 to-teal-50" id="timeline">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?auto=format&fit=crop')] opacity-[0.02] bg-cover bg-center" />
+        <div
+          className="absolute inset-0 opacity-[0.02] bg-cover bg-center"
+          style={{ backgroundImage: `url(${bg2})` }}
+        />
         <div className="container mx-auto px-6 max-w-5xl relative">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-purple-900 tracking-tight">Career Journey</h2>
@@ -140,7 +167,10 @@ function App() {
 
       {/* Projects Section */}
       <section className="relative py-24 bg-gradient-to-b from-teal-50 to-purple-50" id="projects">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?auto=format&fit=crop')] opacity-[0.02] bg-cover bg-center" />
+        <div
+          className="absolute inset-0 opacity-[0.02] bg-cover bg-center"
+          style={{ backgroundImage: `url(${bg2})` }}
+        />
         <div className="container mx-auto px-6 max-w-5xl relative">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-purple-900 tracking-tight">Featured Projects</h2>
@@ -154,6 +184,7 @@ function App() {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="relative p-6 z-20">
@@ -191,7 +222,10 @@ function App() {
 
       {/* Skills Section */}
       <section className="relative py-24 bg-gradient-to-b from-purple-50 to-teal-50" id="skills">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?auto=format&fit=crop')] opacity-[0.02] bg-cover bg-center" />
+        <div
+          className="absolute inset-0 opacity-[0.02] bg-cover bg-center"
+          style={{ backgroundImage: `url(${bg2})` }}
+        />
         <div className="container mx-auto px-6 max-w-5xl relative">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-purple-900 tracking-tight">Technical Skills</h2>
@@ -229,7 +263,10 @@ function App() {
 
       {/* Contact Section */}
       <section className="relative py-24 bg-gradient-to-b from-teal-50 to-white" id="contact">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?auto=format&fit=crop')] opacity-[0.02] bg-cover bg-center" />
+        <div
+          className="absolute inset-0 opacity-[0.02] bg-cover bg-center"
+          style={{ backgroundImage: `url(${bg2})` }}
+        />
         <div className="container mx-auto px-6 max-w-5xl relative">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-purple-900 tracking-tight">Get In Touch</h2>
