@@ -93,9 +93,9 @@ function App() {
                 solutions. Currently pursuing my CS degree with a focus on AI at Politechnika Łódzka.
               </p>
               <div className="flex gap-4 animate-[fadeIn_1s_ease-out_0.6s] opacity-0 [animation-fill-mode:forwards]">
-                <button className="btn-hover bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-purple-50 transition-colors shadow-lg hover:shadow-xl">
+                {/* <button className="btn-hover bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-purple-50 transition-colors shadow-lg hover:shadow-xl">
                   <Download size={20} /> Resume
-                </button>
+                </button> */}
                 <button
                   onClick={scrollToContact}
                   className="btn-hover bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-teal-500 transition-colors shadow-lg hover:shadow-xl"
