@@ -64,7 +64,7 @@ function App() {
         />
         <meta
           name="keywords"
-          content="Adam Komorowski, Frontend Developer, Strony internetowe, Strony www, Strony Łódź, Adam Łódź, Komorowski Łódź"
+          content="Adam Komorowski, Komorowski Adam, Frontend Developer, Strony internetowe, Strony www, Strony Łódź, Adam Łódź, Komorowski Łódź, Adam Komorowowski Łódź, Komorowski Adam Łódź"
         />
         <meta name="author" content="Adam Komorowski" />
         <meta property="og:title" content="Adam Komorowski - Frontend Developer" />
